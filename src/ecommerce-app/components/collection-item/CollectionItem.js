@@ -10,7 +10,7 @@ const CollectionItem = ({ addItem, item }) => {
   const { id, name, price, imageUrl } = item;
   console.log(imageUrl);
   return (
-    <div className="collection-item">
+    <div index={id} className="collection-item">
       <div
         className="image"
         style={{
