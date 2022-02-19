@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import App from "./Patrick/App";
-// import App from "./Framer/src/App";
-// import "./Framer/src/index.css";
-import App from "./react-mastery/app";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import App from "./ecommerce-app/App";
+import store from "./ecommerce-app/redux/store";
 let renderable = document.getElementById("root");
 
 const Main = () => {
@@ -11,8 +11,11 @@ const Main = () => {
 };
 
 ReactDOM.render(
-  <>
-    <Main />{" "}
-  </>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <Main />{" "}
+    </BrowserRouter>
+  </Provider>,
+
   renderable
 );
