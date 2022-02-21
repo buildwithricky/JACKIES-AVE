@@ -1,14 +1,26 @@
 .sign-in {
-  width: 380px;
+  width: 450px;
   display: flex;
   flex-direction: column;
-
+  margin-right: 20px;
   .title {
     margin: 10px 0;
   }
   .buttons {
     display: flex;
-
     justify-content: space-between;
+  }
+}
+.create-account {
+  display: none;
+  padding: 15px;
+}
+
+@media screen and (max-width: 760px) {
+  .sign-in {
+    width: 100%;
+  }
+  .create-account {
+    display: block;
   }
 }
